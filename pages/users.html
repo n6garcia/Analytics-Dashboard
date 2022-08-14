@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Import CSS and JS for page -->
+  <link rel="stylesheet" href="css/home.css">
+
+  <!-- Boiler plate Header -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Users Page</title>
+
+  <!-- Zing Grid Import -->
+  <script src="https://cdn.zinggrid.com/zinggrid.min.js" defer></script>
+
+</head>
+
+<body>
+    <h1 id="title"> Users Page </h1>
+    <hr>
+    <a href="/authapp/logout" id="logout">Log Out</a>
+    <a href="/authapp/home" id="home">Home</a> <br>
+
+    <zing-grid 
+      id="grid"
+      caption="Users"
+      src="https://reporting.noeldev.site/authapp/crud"
+      editor-controls
+      pager
+      page-size="10"
+      page-size-options="2,3,6,10">
+      <zg-data src="https://reporting.noeldev.site/authapp/crud"></zg-data>
+    </zing-grid>
+    
+</body>
+
+</html>

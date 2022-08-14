@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Import CSS and JS for page -->
+  <link rel="stylesheet" href="css/home.css">
+  <script src="js/report.js"></script>
+
+  <!-- Boiler plate Header -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Report Page</title>
+
+  <!-- Zing Chart Import -->
+  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+
+  <!-- Zing Grid Import -->
+  <script src="https://cdn.zinggrid.com/zinggrid.min.js" defer></script>
+ 
+
+</head>
+
+<body>
+  <h1 id="title"> Load Time Increase </h1>
+  <hr>
+  <a href="/authapp/logout" id="logout">Log Out</a> 
+  <a href="/authapp/home" id="home">Home</a> <br>
+
+  <hr>
+
+  <h2 id="title"> Load time Increase? </h2>
+
+  <p id="margin-left">
+    Something I noticed from the dashboard was that it seems like
+    the load time increases after about 1654647408900 (ms) or Tue Jun 
+    07 2022 17:16:48. This is
+    at about 220 on the bar chart on the dashboard. It seems a little
+    bit more clear on a line chart than a bar chart that this is the 
+    case. The question I have is that I don't exactly know why
+    this is the case. I initially thought that this increase in load
+    times was because I switched over to using a laptop but after 
+    looking at the date I realized this increase in load time was after
+    I updated the website. Right around this time I updated the main page 
+    of my website and it seems like there has been noticeable differences
+    in the load times. 
+    
+  </p>
+
+  <hr>
+
+  <!-- CHART CONTAINER -->
+  <div id="myChart1" class="chart--container"></div>
+  <div id="myChart2" class="chart--container"></div>
+
+  <!-- Zing Grid -->
+  <zing-grid
+    id="grid"
+    caption="Plot Data"
+    pager
+    page-size="10"
+    page-size-options="2,3,6,10">
+    <zg-data src="https://noeldev.site/api/performance"></zg-data>
+    <zg-colgroup>
+      <zg-column index="id"></zg-column>
+      <zg-column index="pageLoadStart"></zg-column>
+      <zg-column index="pageLoadms"></zg-column>
+    </zg-colgroup>
+  </zing-grid>
+
+
+</body>
+
+</html>

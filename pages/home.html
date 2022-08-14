@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Import CSS and JS for page -->
+  <link rel="stylesheet" href="css/home.css">
+  <script src="js/home.js"></script>
+
+  <!-- Boiler plate Header -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Page</title>
+
+  <!-- Zing Chart Import -->
+  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+
+  <!-- Zing Grid Import -->
+  <script src="https://cdn.zinggrid.com/zinggrid.min.js" defer></script>
+
+</head>
+
+<body>
+  <h1 id="title"> Dashboard Home Page </h1>
+  <hr>
+  <div id="home"> 
+    <a href="/authapp/report">Generate Report</a> <br>
+    <a href="/authapp/users">Users (Admin only)</a> <br>
+  </div>
+  <a href="/authapp/logout" id="logout">Log Out</a>
+  <br> <br>
+
+  <!-- CHART CONTAINER -->
+  <div id="myChart1" class="chart--container"></div>
+  <div id="myChart2" class="chart--container"></div>
+
+  <!-- Zing Grid -->
+  <zing-grid
+    id="grid"
+    caption="Agent Strings"
+    pager
+    page-size="3"
+    page-size-options="2,3,6">
+    <zg-data src="https://noeldev.site/api/static"></zg-data>
+    <zg-colgroup>
+      <zg-column index="id"></zg-column>
+      <zg-column index="agentString"></zg-column>
+    </zg-colgroup>
+  </zing-grid>
+
+  <br>
+
+ 
+
+</body>
+
+</html>
