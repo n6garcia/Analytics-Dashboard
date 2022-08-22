@@ -36,12 +36,7 @@ window.addEventListener('load', function() {
                 }
             },
             plot: {
-                animation: {
-                    effect: 'ANIMATION_EXPAND_BOTTOM',
-                    method: 'ANIMATION_STRONG_EASE_OUT',
-                    sequence: 'ANIMATION_NO_SEQUENCE',
-                    speed: "ANIMATION_FAST",
-                }
+
             },
             series: [{
                 // plot 1 values, linear data
@@ -110,12 +105,6 @@ window.addEventListener('load', function() {
             plot: {
                 tooltip: {
                     text: "%t: %v (%npv%)"
-                },
-                animation: {
-                    effect: 'ANIMATION_EXPAND_BOTTOM',
-                    method: 'ANIMATION_STRONG_EASE_OUT',
-                    sequence: 'ANIMATION_NO_SEQUENCE',
-                    speed: 275,
                 }
             },
             series: seriesLi

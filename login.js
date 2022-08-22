@@ -42,15 +42,18 @@ const authenticateUser = async (username, password, done) => {
             throw err;
         }
 
-        const validPassword = await bcrypt.compare(password, result[0].hash);
-
-        if (result.length == 0){
-            return done(null, false);
-        } else if (true){
-            return done(null, result[0]);
+        if (result.length != 0){
+            const validPassword = await bcrypt.compare(password, result[0].hash);
+            
+            if (validPassword){
+                return done(null, result[0]);
+            } else {
+                return done(null, false);
+            }
         } else {
             return done(null, false);
         }
+        
     });
 }
 
