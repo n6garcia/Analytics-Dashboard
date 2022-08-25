@@ -1,5 +1,5 @@
 # Node-Login-System
-Created Reporting Dashboard as a web app.
+Created Analytics Dashboard as a web app.
 
 ## Libraries Used
 Express, Passport, Bcrpt, Mysql
